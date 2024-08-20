@@ -1,30 +1,48 @@
 # Project Overview: Serving COGs on GeoServer
 
-Our project aims to transition our current image files to Cloud Optimized GeoTIFFs (COGs) stored in the cloud. This move will reduce storage costs and enhance access speeds for users. By leveraging COGs, we aim to enable faster and more efficient data retrieval, improving the overall user experience.
+This project transitions current image files to Cloud Optimized GeoTIFFs (COGs) stored in the cloud, reducing storage costs and boosting access speeds. Integration with GeoServer will maintain Web Map Service (WMS) capabilities, ensuring continued usability. Image Mosaics will be implemented for seamless, detailed visualizations of large datasets. Additionally, SpatioTemporal Asset Catalog (STAC) integration will be explored to enhance metadata management and simplify data discovery.
 
-To ensure continued accessibility and usability, we will integrate these COGs with GeoServer to provide Web Map Service (WMS) capabilities. This integration will maintain our existing service offerings while taking advantage of the cloud's scalability and efficiency.
+---
 
-Additionally, we will implement Image Mosaics through GeoServer, allowing users to view and interact with large, seamless mosaics of the image data. This functionality will support more comprehensive and detailed visualizations of geospatial data, enhancing the analytical capabilities available to our users.
+## How to use this repository:
 
-As a forward-looking enhancement, we will explore integrating SpatioTemporal Asset Catalog (STAC) functionality. STAC will provide a robust framework for managing and cataloging geospatial assets, improving metadata management, and enabling easier discovery and access to the data.
+- Configuration and Setup:
 
-```
-│   README.md
-│
-├───Converting to COG
-├───ImageMosaics
-│       MODIS_COG_Mosaic.ipynb
-│       NRSObjStore_COG_Mosaic.ipynb
-│
-├───Logs
-│       Issues.ipynb
-│       Startup_Log.md
-│
-└───Misc
-        PostGIS_Setup.ipynb
-```
+  - GeoServer and database configuration tutorials are located in the `Setup/` directory.
 
-***
-Issues can be found in the Logs folder
+- Jupyter Notebooks (tutorials):
 
-2024-07-31 MG
+  - **The repository contains Jupyter notebooks that guide you through:**
+
+  - For configuring an Image Mosaic, start with `GS_COG_Mosaic.ipynb` in the `ImageMosaics/` folder to configure a mosaic.
+  - The implementation using a STAC-API using `GS_COG_STACAPI_Mosaic.ipynb`.
+
+
+- Issues
+  - View the common issues in the `Logs/` folder.
+
+---
+
+## Requirements
+
+**Python** 3.8 or higher with:
+- gdal
+- pystac
+- requests
+  
+**Java** 11 or higher
+
+**GeoServer** Version 2.25.0 or higher
+- COG Plugin
+- STAC datastore plugin (optional)
+
+---
+
+Next Steps/ Improvements:
+- Try with password protected HTTP / private S3
+- Setup tutorials
+- Sample data links
+- Uploading conversion script
+
+---
+By Matt Graff @ GeoBC, Summer 2024
