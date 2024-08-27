@@ -9,6 +9,7 @@ This project transitions current image files to Cloud Optimized GeoTIFFs (COGs) 
 - Configuration and Setup:
 
   - GeoServer and database configuration tutorials are located in the `Setup/` directory.
+  - For a more general overview, look at the `Example_Tutorial.md` file.
 
 - Jupyter Notebooks (tutorials):
 
